@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("0dbdddb2-81e6-4607-8a85-6d36fb4a23cb")]
+[assembly: Guid("ED77C04C-A8D3-4509-8B50-A218C0D2112B")]
 
 [assembly: InternalsVisibleTo("Remote.Linq.EntityFrameworkCore.Test")]
 
