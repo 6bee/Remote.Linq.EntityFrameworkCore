@@ -1,21 +1,21 @@
 ﻿// Copyright (c) Christof Senn. All rights reserved. See license.txt in the project root for license information.
 
-namespace Remote.Linq.EntityFramework
+namespace Remote.Linq.EntityFrameworkCore
 {
     using Aqua.TypeSystem;
     using Remote.Linq.Expressions;
     using Remote.Linq.ExpressionVisitors;
     using System.ComponentModel;
     using System.Linq;
+    using System.Reflection;
 
     [EditorBrowsable(EditorBrowsableState.Never)]
     internal static class RemoteExpressionReWriter
     {
-        private static readonly System.Reflection.MethodInfo QueryableIncludeMethod = typeof(System.Data.Entity.QueryableExtensions)
-                .GetMethods()
-                .Where(x => x.Name == "Include")
-                .Where(x => x.IsGenericMethod && x.GetGenericArguments().Length == 1)
-                .Single();
+        private static readonly System.Reflection.MethodInfo QueryableIncludeMethod = typeof(Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions)
+            .GetTypeInfo()
+            .GetDeclaredMethods("Include")
+            .Single(x => x.IsGenericMethod && x.GetGenericArguments().Length == 1);
 
         /// <summary>
         /// Replaces resource descriptors by queryable and replaces include method call with entity framework's include methods

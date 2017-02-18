@@ -1,5 +1,5 @@
 language: csharp
 install:
-  - nuget restore Remote.Linq.EntityFramework.sln
+  - nuget restore Remote.Linq.EntityFrameworkCore.sln
 script:
-  - xbuild /p:Configuration=Release Remote.Linq.EntityFramework.sln
+  - xbuild /p:Configuration=Release Remote.Linq.EntityFrameworkCore.sln

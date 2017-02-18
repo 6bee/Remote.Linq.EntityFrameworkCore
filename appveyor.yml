@@ -7,8 +7,8 @@ version: 1.0.{build}
 before_build:
 - cmd: dotnet restore
 build_script:
-- cmd: dotnet build .\src\Remote.Linq.EntityFramework\ .\test\Remote.Linq.EntityFramework.Tests\
+- cmd: dotnet build .\src\Remote.Linq.EntityFrameworkCore\ .\test\Remote.Linq.EntityFrameworkCore.Tests\
 test_script:
-- cmd: dotnet test .\test\Remote.Linq.EntityFramework.Tests\
+- cmd: dotnet test .\test\Remote.Linq.EntityFrameworkCore.Tests\
 build:
   verbosity: normal
