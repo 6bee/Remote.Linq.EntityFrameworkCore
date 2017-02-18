@@ -5,8 +5,13 @@
   "description": "Remote linq extensions for entity framework core. Use this package to apply eager-loading (i.e. using Include-expressions) to EF Core queries.",
   "copyright": "Copyright Christof Senn 2017",
   "packOptions": {
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/6bee/Remote.Linq.EntityFrameworkCore.git"
+    },
+    "owners": [ "Christof Senn" ],
+    "projectUrl": "https://github.com/6bee/Remote.Linq.EntityFrameworkCore",
     "licenseUrl": "https://raw.githubusercontent.com/6bee/Remote.Linq.EntityFrameworkCore/master/license.txt",
-    "projectUrl": "https://github.com/6bee/Remote.Linq.EntityFrameworkCore/wiki",
     "iconUrl": "https://raw.githubusercontent.com/6bee/Remote.Linq.EntityFrameworkCore/master/remotelinq-small.png",
     "tags": [ "LINQ", "expression-tree", "lambda", "dynamic", "remote", "remote-query", "multi-tier", "n-tier", "fluent-interface", "entity-framework-core", "entity-framework", "ef-core", "ef" ]
   },
@@ -16,10 +21,6 @@
   },
   "frameworks": {
     "net451": { },
-    "netstandard1.6": {
-      "dependencies": {
-        "System.Reflection.TypeExtensions":  "4.1.0"
-      }
-    }
+    "netstandard1.6": { }
   }
 }
