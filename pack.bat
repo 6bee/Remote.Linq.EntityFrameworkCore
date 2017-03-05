@@ -1,1 +1,1 @@
-clean && dotnet restore && dotnet build src\Remote.Linq.EntityFrameworkCore test\Remote.Linq.EntityFrameworkCore.Tests && dotnet test test\Remote.Linq.EntityFrameworkCore.Tests && dotnet pack src\Remote.Linq.EntityFrameworkCore --output artifacts --configuration Debug --version-suffix 001
+clean && dotnet restore && dotnet build src\Remote.Linq.EntityFrameworkCore test\Remote.Linq.EntityFrameworkCore.Tests && dotnet test test\Remote.Linq.EntityFrameworkCore.Tests && dotnet pack src\Remote.Linq.EntityFrameworkCore --output artifacts --configuration Debug --version-suffix 004
