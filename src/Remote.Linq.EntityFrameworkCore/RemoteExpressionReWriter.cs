@@ -53,7 +53,7 @@ namespace Remote.Linq.EntityFrameworkCore
 
                     var efIncludeMethod = QueryableIncludeMethod.MakeGenericMethod(elementType);
 
-                    var callExpression = Expression.Call(null, efIncludeMethod, new[] { queryableExpression, pathExpression });
+                    var callExpression = new MethodCallExpression(null, efIncludeMethod, new[] { queryableExpression, pathExpression });
                     expression = callExpression;
                 }
 
