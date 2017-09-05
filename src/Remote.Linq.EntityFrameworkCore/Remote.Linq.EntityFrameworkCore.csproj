@@ -27,7 +27,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Remote.Linq" Version="5.6.0-alpha-001" />
+    <PackageReference Include="Remote.Linq" Version="5.6.0-alpha-002" />
   </ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' != 'netstandard2.0' ">

@@ -28,9 +28,9 @@ namespace Remote.Linq.EntityFrameworkCore.Tests
             var source = Enumerable.Range(0, 100).Select(i => new Item { Name = i.ToString().PadLeft(2, '0') }).AsQueryable();
 
             Func<Expression, IEnumerable<DynamicObject>> execute = 
-                expression => expression.ExecuteWithEntityFrameworkCore(t => source, canBeEvaluatedLocally: null);
+                expression => expression.ExecuteWithEntityFrameworkCore(t => source);
 
-            var queryable = RemoteEntityFrameworkCoreQueryable.Create<Item>(execute, canBeEvaluatedLocally: null);
+            var queryable = RemoteQueryable.Factory.CreateEntityFrameworkCoreQueryable<Item>(execute);
 
             var result = queryable.Where(p => EF.Functions.Like(p.Name, "1%")).ToList();
 
