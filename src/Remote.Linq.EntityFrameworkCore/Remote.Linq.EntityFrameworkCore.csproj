@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Description>Remote linq extensions for entity framework core. Use this package to apply eager-loading (i.e. using Include-expressions) to EF Core queries.</Description>
     <Copyright>Copyright Christof Senn 2013-2017</Copyright>
-    <VersionPrefix>2.0.0-alpha</VersionPrefix>
+    <VersionPrefix>2.0.0</VersionPrefix>
     <Authors>Christof Senn</Authors>
     <TargetFrameworks>netstandard1.3;netstandard1.6;netstandard2.0</TargetFrameworks>
     <AssemblyName>Remote.Linq.EntityFrameworkCore</AssemblyName>
@@ -27,7 +27,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Remote.Linq" Version="5.6.0-alpha-003" />
+    <PackageReference Include="Remote.Linq" Version="5.6.0" />
   </ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' != 'netstandard2.0' ">
